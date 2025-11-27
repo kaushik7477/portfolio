@@ -142,13 +142,42 @@ body {
 .box-2 {
   grid-area: box2;
   background-color: #6a0103;
-  /*background-image: url('img/kaushikimg.jpg');*/ 
+  /* background-image: url('img/kaushikimg.jpg');  */
   background-size: cover;
   background-position: center;
   cursor: pointer;
   justify-content: flex-end;
   font-family: 'Courier New', Courier, monospace;
 }
+
+/* --- Box 2 Updates --- */
+.box-2 {
+  /* Ensure the box acts as a container for absolute positioning */
+  position: relative; 
+  padding: 0; /* Remove padding so image touches edges if needed */
+  /* Remove the old background-image line if it exists here */
+}
+
+/* Style the HTML image to look like a background */
+.box-2 .bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps aspect ratio nice (like background-size: cover) */
+  z-index: 1; /* Sits at the bottom level */
+  border-radius: 20px; /* Matches your box border radius */
+}
+
+/* Bring text to the front */
+.box-2 .hover-text {
+  position: relative;
+  z-index: 2; /* Sits on top of the image */
+  /* Your existing text styles... */
+  margin: 20px; /* Add margin since we removed padding from parent */
+}
+
 .box-2 .hover-text {
   font-size: 1.2rem;
   color: #FDF4F2;
@@ -375,4 +404,3 @@ body {
   width: 90%;
 }
 .box-8 .info-link:hover { transform: translateY(-1px); }
-
