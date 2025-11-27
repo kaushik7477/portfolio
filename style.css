@@ -142,7 +142,7 @@ body {
 .box-2 {
   grid-area: box2;
   background-color: #6a0103;
-  background-image: url('img/kaushikimg.jpg'); 
+  /*background-image: url('img/kaushikimg.jpg');*/ 
   background-size: cover;
   background-position: center;
   cursor: pointer;
@@ -375,3 +375,4 @@ body {
   width: 90%;
 }
 .box-8 .info-link:hover { transform: translateY(-1px); }
+
